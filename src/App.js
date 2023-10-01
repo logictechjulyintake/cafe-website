@@ -1,9 +1,24 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./Nav";
+import About from "./page/About";
+import Home from "./page/Home";
+import Menu from "./page/Menu";
+import Where from "./page/Where";
+
 function App() {
   return (
     <>
-      <h1 className="text-lg font-bold w-screen bg-slate-200 text-center">
-        Hello world!
-      </h1>
+      <Nav />
+
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="menu" element={<Menu />} />
+          <Route path="where" element={<Where />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
