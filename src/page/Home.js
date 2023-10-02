@@ -15,7 +15,7 @@ function Home() {
           Open from 6am to 8pm{" "}
         </p>
         <p className="text-white absolute bottom-3 right-2">
-          Birendranagar, Surkhet
+          Birendranagar, 01  Surkhet
         </p>
       </div>
     </>
