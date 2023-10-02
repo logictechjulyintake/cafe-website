@@ -1,4 +1,5 @@
 import React from "react";
+import AboutImg from "../img/coffeeshop.jpg";
 
 function About() {
   return (
@@ -10,7 +11,7 @@ function About() {
           </span>
         </div>
         <div className="flex justify-center items-center">
-          <div className="w-[600px]">
+          <div className="w-[700px]">
             <p className="">
               The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -23,11 +24,16 @@ function About() {
               made-to-order breakfast and lunch sandwiches, as well as a
               selection of sides and salads and other good stuff.
             </p>
-            <p className="bg-slate-100 mt-8 m-3">
+            <p className="bg-slate-100 my-6 border-l-8 p-2">
               "Use products from nature for what it's worth - but never too
               early, nor too late." Fresh is the new sweet.
-              <p className="my-4 ">Chef, Coffeeist and Owner: Liam Brown</p>
+            <p className="my-4 ">Chef, Coffeeist and Owner: Liam Brown</p>
             </p>
+            <div
+              className="w-full h-[400px] box-border bg-cover grayscale mt-7"
+              style={{ backgroundImage: `url(${AboutImg})` }}></div>
+              <p className="my-4"><b>Opening hours:</b> everyday from 6am to 5pm.</p>
+              <p className="my-4"><b>Address:</b> Birendranagar,Surkhet</p>
           </div>
         </div>
       </div>
