@@ -1,12 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
-@layer components{
+@layer base {
+  html {
+    font-family: "Inconsolata", system-ui, sans-serif;
+  }
+}
 
-        .btn-a {
-                @apply flex-auto hover:bg-slate-300 text-center m-2 p-2;
-        }
-
-
+@layer components {
+  .btn-a {
+    @apply flex-auto hover:bg-slate-300 text-center m-2 p-2;
+  }
 }

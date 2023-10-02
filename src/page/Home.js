@@ -1,5 +1,6 @@
 import React from "react";
 import CafeImg from "../img/cafeimg.jpg";
+import About from "./About";
 
 function Home() {
   return (
@@ -15,9 +16,11 @@ function Home() {
           Open from 6am to 8pm{" "}
         </p>
         <p className="text-white absolute bottom-3 right-2">
-          Birendranagar, 01  Surkhet
+          Birendranagar, 01 Surkhet
         </p>
       </div>
+
+      <About />
     </>
   );
 }
