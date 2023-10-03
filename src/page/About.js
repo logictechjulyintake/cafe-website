@@ -27,13 +27,18 @@ function About() {
             <p className="bg-slate-100 my-6 border-l-8 p-2">
               "Use products from nature for what it's worth - but never too
               early, nor too late." Fresh is the new sweet.
-            <p className="my-4 ">Chef, Coffeeist and Owner: Liam Brown</p>
+              <p className="my-4 ">Chef, Coffeeist and Owner: Liam Brown</p>
             </p>
             <div
               className="w-full h-[400px] box-border bg-cover grayscale mt-7"
-              style={{ backgroundImage: `url(${AboutImg})` }}></div>
-              <p className="my-4"><b>Opening hours:</b> everyday from 6am to 5pm.</p>
-              <p className="my-4"><b>Address:</b> Birendranagar,Surkhet</p>
+              style={{ backgroundImage: `url(${AboutImg})` }}
+            ></div>
+            <p className="my-4">
+              <b>Opening hours:</b> everyday from 6am to 5pm.
+            </p>
+            <p className="my-4">
+              <b>Address:</b> Birendranagar,Surkhet
+            </p>
           </div>
         </div>
       </div>

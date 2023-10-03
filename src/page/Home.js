@@ -1,6 +1,8 @@
 import React from "react";
 import CafeImg from "../img/cafeimg.jpg";
 import About from "./About";
+import Menu from "./Menu";
+import Where from "./Where";
 
 function Home() {
   return (
@@ -21,8 +23,10 @@ function Home() {
       </div>
 
       <About />
+      <Menu />
+      <Where />
     </>
   );
-}
+ }
 
 export default Home;
