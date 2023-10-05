@@ -7,7 +7,7 @@ import Where from "./Where";
 function Home() {
   return (
     <>
-      <div
+      <div id="home"
         className="w-full h-[500px] box-border bg-cover relative"
         style={{ backgroundImage: `url(${CafeImg})` }}
       >

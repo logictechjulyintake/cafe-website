@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import CoffeeImg from "../img/coffee.jpg";
 
 function Menu() {
+  const eatContentRef = useRef(null);
+  const drinkContentRef = useRef(null);
+
+  function openEatContent() {
+    eatContentRef.current.style.display = "block";
+    drinkContentRef.current.style.display = "none";
+  }
+  function openDrinkContent (){
+    eatContentRef.current.style.display = "none";
+    drinkContentRef.current.style.display = "block";
+  }
+
   return (
     <>
       <div id="menu">
@@ -14,15 +26,19 @@ function Menu() {
         <div className="flex justify-center flex-col items-center">
           <div className="w-[700px] shadow-md">
             <div className="flex flex-row justify-around shadow-md">
-              <div className="bg-[#616161] text-white cursor-pointer flex-auto text-center m-2 p-1">
+              <div
+                className="bg-[#616161] text-white cursor-pointer flex-auto text-center m-2 p-1"
+                onClick={openEatContent}
+              >
                 Eat
               </div>
-              <div className="cursor-pointer flex-auto text-center m-2 p-1">
+              <div className="bg-[#616161] cursor-pointer flex-auto text-center m-2 p-1" onClick={openDrinkContent}>
                 Drink
               </div>
             </div>
             <div>
-              <div className="p-3">
+              {/* eat content*/}
+              <div className="p-3" ref={eatContentRef}>
                 <h5 className="mt-8">Bread Basket</h5>
                 <p className="text-gray-500 mt-4">
                   Assortment of fresh baked fruit breads and muffins 5.50
@@ -51,7 +67,8 @@ function Menu() {
                 </p>
               </div>
 
-              <div className="p-3">
+              {/* drink content */}
+              <div className="p-3" ref={drinkContentRef}>
                 <h5 className="mt-8">Coffee</h5>
                 <p className="text-gray-500 mt-4">Regular coffee 2.50</p>
 
