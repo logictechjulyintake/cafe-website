@@ -10,15 +10,14 @@ function Menu() {
   function openEatContent() {
     eatContentRef.current.style.display = "block";
     drinkContentRef.current.style.display = "none";
-    eatContentBtn.current.classList.add("menu-active")
-    drinkContentBtn.current.classList.remove("menu-active")
-
+    eatContentBtn.current.classList.add("menu-active");
+    drinkContentBtn.current.classList.remove("menu-active");
   }
   function openDrinkContent() {
     eatContentRef.current.style.display = "none";
     drinkContentRef.current.style.display = "block";
-    eatContentBtn.current.classList.remove("menu-active")
-    drinkContentBtn.current.classList.add("menu-active")
+    eatContentBtn.current.classList.remove("menu-active");
+    drinkContentBtn.current.classList.add("menu-active");
   }
 
   return (
@@ -35,14 +34,14 @@ function Menu() {
             <div className="flex flex-row justify-around shadow-md">
               <div
                 className="menu-active cursor-pointer flex-auto text-center m-2 p-1"
-                onClick={openEatContent} 
+                onClick={openEatContent}
                 ref={eatContentBtn}
               >
                 Eat
               </div>
               <div
                 className="cursor-pointer flex-auto text-center m-2 p-1"
-                onClick={openDrinkContent} 
+                onClick={openDrinkContent}
                 ref={drinkContentBtn}
               >
                 Drink
@@ -80,7 +79,11 @@ function Menu() {
               </div>
 
               {/* drink content */}
-              <div className="p-3" ref={drinkContentRef}>
+              <div
+                className="p-3"
+                ref={drinkContentRef}
+                style={{ display: "none" }}
+              >
                 <h5 className="mt-8">Coffee</h5>
                 <p className="text-gray-500 mt-4">Regular coffee 2.50</p>
 
