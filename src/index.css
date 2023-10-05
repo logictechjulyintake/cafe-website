@@ -13,4 +13,7 @@
   .btn-a {
     @apply flex-auto hover:bg-slate-300 text-center m-2 p-2;
   }
+  .menu-active {
+    @apply bg-[#616161] text-white;
+  }
 }

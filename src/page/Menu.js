@@ -2,16 +2,23 @@ import React, { useRef } from "react";
 import CoffeeImg from "../img/coffee.jpg";
 
 function Menu() {
+  const eatContentBtn = useRef(null);
+  const drinkContentBtn = useRef(null);
   const eatContentRef = useRef(null);
   const drinkContentRef = useRef(null);
 
   function openEatContent() {
     eatContentRef.current.style.display = "block";
     drinkContentRef.current.style.display = "none";
+    eatContentBtn.current.classList.add("menu-active")
+    drinkContentBtn.current.classList.remove("menu-active")
+
   }
-  function openDrinkContent (){
+  function openDrinkContent() {
     eatContentRef.current.style.display = "none";
     drinkContentRef.current.style.display = "block";
+    eatContentBtn.current.classList.remove("menu-active")
+    drinkContentBtn.current.classList.add("menu-active")
   }
 
   return (
@@ -27,12 +34,17 @@ function Menu() {
           <div className="w-[700px] shadow-md">
             <div className="flex flex-row justify-around shadow-md">
               <div
-                className="bg-[#616161] text-white cursor-pointer flex-auto text-center m-2 p-1"
-                onClick={openEatContent}
+                className="menu-active cursor-pointer flex-auto text-center m-2 p-1"
+                onClick={openEatContent} 
+                ref={eatContentBtn}
               >
                 Eat
               </div>
-              <div className="bg-[#616161] cursor-pointer flex-auto text-center m-2 p-1" onClick={openDrinkContent}>
+              <div
+                className="cursor-pointer flex-auto text-center m-2 p-1"
+                onClick={openDrinkContent} 
+                ref={drinkContentBtn}
+              >
                 Drink
               </div>
             </div>
